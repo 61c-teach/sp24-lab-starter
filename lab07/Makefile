@@ -1,5 +1,7 @@
 CC=gcc
 CFLAGS_SIMD=-std=c99 -Wall -O0 -c -mavx -mfma -g
+CFLAGS_OMP=-std=gnu99 -fopenmp -c
+LDFLAGS_OMP=-fopenmp
 
 ex1: ex1_test.o ex1.o
 	$(CC) $^ -o $@
